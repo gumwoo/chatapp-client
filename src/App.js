@@ -1,5 +1,6 @@
 import "./App.css";
 import InputField from "./components/InputField/InputField";
+import MessageContainer from "./components/MessageContainer/MessageContainer";
 import socket from "./server";
 import { useEffect, useState } from "react";
 function App() {
@@ -32,7 +33,7 @@ function App() {
   return (
     <div>
       <div className="App">
-
+        <MessageContainer messageList={messageList} user={user}/>
         <InputField message={message} setMessage={setMessage} sendMessage={sendMessage}/>
       </div>
 
