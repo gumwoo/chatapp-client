@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Real-time Chat Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+카카오톡과 유사한 UI/UX를 가진 실시간 채팅 웹 애플리케이션입니다.
 
-## Available Scripts
+## 주요 기능
+- 실시간 1:N 채팅
+- 사용자 입/퇴장 시스템 메시지
+- 프로필 이미지 및 사용자 이름 표시
+- 자동 스크롤
+- 연속 메시지 시 프로필 숨김 처리
+- 메시지 전송 상태 표시
 
-In the project directory, you can run:
+## 기술 스택
+### Frontend
+- React.js
+- Material-UI Components
+- Socket.io-client
+- CSS Flexbox/Grid
 
-### `npm start`
+### Backend
+- Node.js
+- Express
+- Socket.io
+- MongoDB
+- Mongoose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 설치 및 실행 방법
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. MongoDB 설치 및 실행
 
-### `npm test`
+# MongoDB 실행
+mongod
+2. 서버 설치 및 실행
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 프로젝트 루트 디렉토리에서
+npm install
+node index.js
+3. 클라이언트 설치 및 실행
 
-### `npm run build`
+# chatapp-client 디렉토리에서
+npm install
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 주요 기능 설명
+1. 실시간 통신
+-Socket.io를 사용한 양방향 실시간 통신 구현
+-메시지 전송/수신 이벤트 처리
+-연결 상태 관리
+2. 사용자 관리
+-MongoDB를 통한 사용자 정보 저장
+-접속 상태 관리
+-중복 이름 처리
+3. 채팅 기능
+-실시간 메시지 전송/수신
+-시스템 메시지 처리
+-메시지 저장 및 불러오기
+-프로필 이미지 및 사용자 이름 표시
+4. UI/UX
+-반응형 디자인
+-사용자 친화적 인터페이스
+-자동 스크롤
+-메시지 상태 표시
+5. 향후 개선 사항
+-채팅방 기능 추가
+-파일 전송 기능
+-이모티콘 지원
+-읽음 확인 기능
+-메시지 검색 기능
+-알림 기능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
