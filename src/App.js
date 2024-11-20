@@ -26,8 +26,14 @@ function App() {
   };
   const sendMessage=(event)=>{
     event.preventDefault()
+    if (!message.trim()) return; // 빈 메시지 전송 방지
     socket.emit("sendMessage", message,(res)=>{
-      console.log("sendMessage res", res);
+      if(res?.ok) {
+        setMessage('');
+        console.log('메시지 전송 성공:', message);
+      } else {
+        console.log('메시지 전송 실패');
+      }
     })
   }
   return (

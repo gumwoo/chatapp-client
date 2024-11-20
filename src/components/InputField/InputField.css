@@ -1,5 +1,5 @@
 .input-area {
-    background-color: red;
+    background-color: white; /* red에서 white로 변경 */
     min-height:50px;
     display: flex;
     position: absolute;
@@ -55,4 +55,3 @@
   .send-button:active {
     background-color: yellow;
   }
-  
